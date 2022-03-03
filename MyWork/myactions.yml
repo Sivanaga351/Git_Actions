@@ -18,9 +18,12 @@ jobs:
         echo "${{github.token}}"
 
     - name: simple js action
+      id: Wish
       uses: actions/hello-world-javascript-action@v1
       with: 
-        who-to-greet: Srinu
+        who-to-greet: Sivanaga
+    - name: log Time
+      uses: "${{steps.wish.outputs.time}}"
 
 
 
