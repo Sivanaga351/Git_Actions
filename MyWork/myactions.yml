@@ -1,6 +1,9 @@
 name: My Actions
 
-on: push
+on: 
+  push:
+  pull_request:
+    types: [closed, opened, reopened,assigned]
 
 run-github-actions:
 jobs:
