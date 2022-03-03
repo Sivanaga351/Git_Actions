@@ -4,14 +4,12 @@ on: [push]
 
 jobs:
   run-github-actions:
-    runs-on: windows-lastet
+    runs-on: ubuntu-latest
     steps:
       - name: Actions
         id: greet
         uses: actions\hello-world-javascript-action@v1
         with:
-          who-to-greet: John
+          who-to-greet: Siva
       - name: Log Greething time
         run: echo"${{steps.greet.outputs.time}}"
-      
-  
