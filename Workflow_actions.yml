@@ -13,4 +13,5 @@ jobs:
           who-to-greet: Siva
       - name: Log Greething time
         run: echo"${{steps.greet.outputs.time}}"
+      - name : checking the code
   
