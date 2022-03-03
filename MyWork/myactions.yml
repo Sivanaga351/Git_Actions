@@ -3,7 +3,7 @@ name: My Actions
 on: 
   push:
   pull_request:
-    types: [closed, reopened,opened,assigned]
+    types: [closed, reopened, opened, assigned]
 
 run-github-actions:
 jobs:
