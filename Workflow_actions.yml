@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-github-actions:
-    runs-on: ubuntu-latest
+    runs-on: windows-lastet
     steps:
       - name: Actions
         id: greet
@@ -13,5 +13,5 @@ jobs:
           who-to-greet: Siva
       - name: Log Greething time
         run: echo"${{steps.greet.outputs.time}}"
-      - name : checking the code
+      
   
