@@ -1,0 +1,17 @@
+name: Workflow_Actions
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: windows-lastet
+    steps:
+      - name: Actions
+        id: greet
+        uses: actions\hello-world-javascript-action@v1
+        with:
+          who-to-greet: Siva
+      - name: Log Greething time
+        run: echo"${{steps.greet.outputs.time}}"
+      
+  
