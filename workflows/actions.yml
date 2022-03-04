@@ -2,23 +2,23 @@ name: Actions Worflow
 
 on:
   push:
-    #branches:
-     # - master
-      #- "feature/*" # matches feature/featA, feature/featB, doesn't match feature/feat/a
-      #-# "feature/**"
-      #- "!feature/featC"
-    #tags:
-     # - v1.*
-    #paths:
-     # - "**.js"
-      #- "!filename.js"
-    # paths-ignore:
-    #   - 'docs/**'
-  # repository_dispatch:
-  #   types: [build]
-  # schedule:
-  #   - cron: "0/5 * * * *"
-  #   - cron: "0/6 * * * *"
+    branches:
+     - master
+      - "feature/*" # matches feature/featA, feature/featB, doesn't match feature/feat/a
+      -# "feature/**"
+      - "!feature/featC"
+    tags:
+     - v1.*
+    paths:
+     - "**.js"
+      - "!filename.js"
+    paths-ignore:
+      - 'docs/**'
+  repository_dispatch:
+    types: [build]
+  schedule:
+    - cron: "0/5 * * * *"
+    - cron: "0/6 * * * *"
    
   pull_request:
      types: [closed, assigned, opened, reopened]
