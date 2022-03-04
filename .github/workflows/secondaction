@@ -1,0 +1,30 @@
+name: My Actions
+
+on: 
+  push:
+  pull_request:
+    types: [closed, reopened, opened, assigned]
+
+
+run-github-actions:
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: List Files
+      run: |
+        pwd
+        ls 
+
+    - name: simple js action
+      id: Wish
+      uses: actions/hello-world-javascript-action@v1
+      with: 
+        who-to-greet: Srinu
+    - name: log time
+      uses: "${{steps.wish.outputs.time}}"
+
+
+
+    
