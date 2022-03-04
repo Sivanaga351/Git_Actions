@@ -2,9 +2,8 @@ name: My Actions
 
 on: 
   push:
-  pull_request:
-    types: [closed, reopened, opened, assigned]
-
+   branches: 
+    - main
 
 jobs:
  build:
@@ -22,8 +21,6 @@ jobs:
       uses: actions/hello-world-javascript-action@v1
       with: 
         who-to-greet: Srinu
-#     - name: log time
-#       uses: "${{steps.Wish.outputs.time}}"
 
 
 
