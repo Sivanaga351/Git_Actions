@@ -6,9 +6,8 @@ on:
     types: [closed, reopened, opened, assigned]
 
 
-run-github-actions:
 jobs:
-build:
+ build:
   runs-on: windows-latest
   steps:
     - name: Checkout
@@ -23,8 +22,8 @@ build:
       uses: actions/hello-world-javascript-action@v1
       with: 
         who-to-greet: Srinu
-    - name: log time
-      uses: "${{steps.wish.outputs.time}}"
+#     - name: log time
+#       uses: "${{steps.Wish.outputs.time}}"
 
 
 
