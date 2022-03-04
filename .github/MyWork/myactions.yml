@@ -21,7 +21,7 @@ jobs:
       id: Wish
       uses: actions/hello-world-javascript-action@v1
       with: 
-        who-to-greet: Siva
+        who-to-greet: Sivanaga
     - name: log time
       uses: "${{steps.wish.outputs.time}}"
 
